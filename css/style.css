@@ -1,19 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Muli", sans-serif;
   margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
@@ -21,3 +16,49 @@ body {
   justify-content: center;
   height: 100vh;
   overflow: hidden; }
+
+.container {
+  display: flex;
+  width: 90vw; }
+  .container div:nth-child(1) {
+    background-image: url("https://images.unsplash.com/photo-1610303871783-491dc6d0a165?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"); }
+  .container div:nth-child(2) {
+    background-image: url("https://images.unsplash.com/photo-1444837881208-4d46d5c1f127?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1345&q=80"); }
+  .container div:nth-child(3) {
+    background-image: url("https://images.unsplash.com/photo-1491622652925-46646d8a603d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"); }
+  .container div:nth-child(4) {
+    background-image: url("https://images.unsplash.com/photo-1585822955760-6898deab3b05?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8YmxhY2slMjBhbmQlMjB3aGl0ZSUyMG5hdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"); }
+  .container div:nth-child(5) {
+    background-image: url("https://images.unsplash.com/photo-1496629062893-b0f566065d44?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fGJsYWNrJTIwYW5kJTIwd2hpdGUlMjBsYW5kc2NhcGUlMjBuYXR1cmV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"); }
+  .container .panel {
+    background-size: 100% 100%;
+    background-position: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in; }
+    .container .panel h3 {
+      font-size: 24px;
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      margin: 0;
+      opacity: 0; }
+    .container .panel.active {
+      flex: 5;
+      border-radius: 40px; }
+      .container .panel.active h3 {
+        opacity: 1;
+        left: 20px;
+        transition: opacity 0.3s ease-in 1s; }
+
+@media screen and (max-width: 767px) {
+  .container {
+    width: 100vw; }
+    .container .panel:nth-of-type(4), .container .panel:nth-of-type(5) {
+      display: none; } }
